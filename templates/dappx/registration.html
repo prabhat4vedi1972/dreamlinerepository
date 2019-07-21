@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dreamtime Travels</title>
+
+{% extends "dappx/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+  <div class="container">
+    <div class="jumbotron">
+      {% if registered %}
+        <h1>Thank you for registering. We will get back to you shortly.</h1>
+      {% else %}
+     <table>
+      <tr>
+      </tr>
+     </table> 
+<form  method="POST" >
+<style type="text/css">
+			/* CSS Document */
+
+		
+@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local(Roboto-Regular),url(https://fonts.gstatic.com/s/roboto/v12/2UX7WLTfW3W8TclTUvlFyQ.woff) format("woff")}
+
+ body{padding:0;margin:0;font-family:'Roboto',sans-serif,Arial,Verdana;background-color:#fff}			
+			
+
+h1
+{
+font-weight:normal;
+font-size:30px;
+color:lime;
+padding:100px;
+margin:100px;
+}
+
+h2
+{
+margin:0px;
+padding:0px;
+color:lime;
+font-size:30px;
+}
+
+p
+{
+margin-left:8px;
+padding:0;
+margin-top:0px;
+margin-bottom:0px;
+color:aqua;
+font-size:18px;
+}
+
+.input
+{
+width:92%;
+border:10px solid #cccccc;
+margin-left:115px;
+border-radius:114px;
+padding:115px;
+height:1511px;
+}
+
+
+textarea
+{
+height:60px;
+width:96%;
+border:1px solid #cdeccc;
+margin-left:5px;
+border-radius:4px;
+padding:5px;
+box-sizing:border-box;
+}
+
+.style1 {color: #C27074}
+.fl{float:left;}
+
+.sbt
+{
+background-color:#de691a; color:#ffffff; border:3px solid #a24713; border-radius:10px; font-size:18px; padding:3px 10px; cursor:pointer;
+}
+
+	@media only screen and (max-width: 640px)  
+            {
+					.devi-wid {width:440px!important; padding:0;}	
+					.cen {text-align: center!important;} 
+			}
+	@media only screen and (max-width: 479px) 
+			{
+					 .devi-wid {width:325px!important; padding:0;}	
+					 .cen {text-align: center!important;}					 
+			}
+					<style>
+thead {color:green;}
+tbody {color:teal;}
+tfoot {color:red;}
+
+table, th, td {
+  border: 0px solid black;
+  align:"center"
+  bgcolor:red
+  border-color: gray;
+  
+}
+
+a:link {
+  color: green; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+
+<table>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>     
+        <h2><div align="center" style="background-color:green; color:aqua; font-size:20px;padding:8px 10px;">Registration Details</div>
+    </td>
+
+</tr>
+
+</table>
+          <table border="1" >
+          {% csrf_token %}
+<td>
+        {{ profile_form.as_table }}
+	 </td>
+
+<tr>&nbsp;&nbsp;&nbsp;&nbsp;</tr>
+          <td><input  name="btn_submit" type="submit" value="Register" onClick="return valid_signup();" class="sbt">
+
+          </td>
+<tr>&nbsp;&nbsp;&nbsp;&nbsp;</tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<td>
+            <h2><a href="https://www.clickindia.com/leads/yatri4travel-enquiry.php?pr=8999">Offer Details</a></h2>
+
+</td>
+
+          </table>
+
+</form>
+
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}

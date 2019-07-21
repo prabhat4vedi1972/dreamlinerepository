@@ -1,0 +1,217 @@
+{% extends "dappx/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+  <div class="container">
+    <div class="jumbotron">
+      {% if registered %}
+        <h1>Thank you for registering. We will get back to you shortly.</h1>
+      {% else %}
+        <h1>Register Here</h1>
+        <h3>Just fill out the form.</h3>
+<title>Dreamtime Travels</title>
+<style type="text/css">
+			/* CSS Document */
+
+		
+@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local(Roboto-Regular),url(https://fonts.gstatic.com/s/roboto/v12/2UX7WLTfW3W8TclTUvlFyQ.woff) format("woff")}
+
+ body{padding:0;margin:0;font-family:'Roboto',sans-serif,Arial,Verdana;background-color:#fff}			
+			
+h1
+{
+font-weight:normal;
+font-size:30px;
+color:lime;
+padding:0px;
+margin:0px;
+}
+
+h2
+{
+margin:0px;
+padding:0px;
+color:red;
+font-size:20px;
+}
+
+p
+{
+margin-left:8px;
+padding:0;
+margin-top:0px;
+margin-bottom:0px;
+color:aqua;
+font-size:18px;
+}
+
+.input
+{
+width:92%;
+border:1px solid #cccccc;
+margin-left:5px;
+border-radius:4px;
+padding:5px;
+height:15px;
+}
+
+
+textarea
+{
+height:60px;
+width:96%;
+border:1px solid #cdeccc;
+margin-left:5px;
+border-radius:4px;
+padding:5px;
+box-sizing:border-box;
+}
+
+.style1 {color: #C27074}
+.fl{float:left;}
+
+.sbt
+{
+background-color:#de691a; color:#ffffff; border:10px solid #a24713; border-radius:10px; font-size:28px; padding:1px 70px; cursor:pointer;
+}
+
+	@media only screen and (max-width: 640px)  
+            {
+					.devi-wid {width:440px!important; padding:0;}	
+					.cen {text-align: center!important;} 
+			}
+	@media only screen and (max-width: 479px) 
+			{
+					 .devi-wid {width:325px!important; padding:0;}	
+					 .cen {text-align: center!important;}					 
+			}
+					
+</style>
+<body bgcolor="#f5f5f5">
+<table width="915" border="0" align="center" cellpadding="0" cellspacing="0" class="devi-wid">
+  <tbody>
+  <tr>
+    <td>
+	
+	<table width="115" border="3" cellpadding="0" cellspacing="10" class="devi-wid">
+     <tr>
+        <td width="19" height="10" align="left"><img src="http://www.gtoad.com/wp-content/uploads/2017/09/Dreamtime-Travel-Logo.png" width="150" height="150"></td>
+      </tr>
+    </table>
+
+	
+	
+	<table width="915" class="devi-wid" border="0" cellpadding="0" cellspacing="0" bgcolor="teal">
+      <tbody>
+	   <tr>
+    <td height="50" colspan="2" align="center"><h1>Registration Details</h1></td>
+  </tr>
+	  <tr>
+	  <td valign="top">
+	  
+	  <table width="450" border="0" align="right" cellpadding="0" cellspacing="0" class="devi-wid">
+     <tr>
+	  <td valign="top">	
+		
+		<table width="430" border="0" cellpadding="0" cellspacing="0" style="margin-top:20px" class="devi-wid">
+          <tbody>
+          <tr>
+            <td height="450" align="center" valign="top">
+			<table width="430" border="0" align="center" cellpadding="0" cellspacing="0" class="devi-wid">
+              <tbody><tr>
+                <td height="440" valign="top">
+				<form action="" class="validate-form contact-form" method="post" name="frm" id = "ycity_1">
+				
+				<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="devi-wid">
+                  <tbody>
+                  <tr>
+                    <td height="25" align="left" valign="top"><p><span class="style1">*</span>Name</p> </td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="yname" id="name" class="input" value=""></td>
+                  </tr>
+                  <tr>
+                    <td height="35" align="left" valign="middle" style="padding-top:10px"><p><span class="style1">*</span> Email </p> </td>
+                  </tr>
+                  <tr>
+                    <td valign="middle"><input type="text" name="yemail" id="Email" class="input" value=""></td>
+                  </tr>
+                  <tr>
+                    <td height="35" align="left" valign="middle" style="padding-top:10px"><p><span class="style1">*</span>Mobile No.</p> </td>
+                  </tr>
+                   <tr>
+					<td width="42"><input type="text" class="input" style="width:36px;" value="+91" readonly><input type="text" name="ymobileno" id="mobile" class="input" style="max-width:315px;" value="" ></td>
+				  </tr>
+				  <tr>
+					<td width="42" id="hidden"></td>
+				  </tr>
+				
+				  <tr>
+                    <td height="35" align="left" valign="middle" style="padding-top:10px"><p><span class="style1">*</span>City</p> </td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="ycity" class="input" value="" list = "city"></td>
+					
+                  </tr>
+                  <tr>
+                    <td height="35" align="left" valign="middle" style="padding-top:10px"><p><span class="style1">*</span>Query</p> </td>
+                  </tr>
+                  <tr>
+                    <td><textarea id="fuser_req" name="comments">I am interested, please call me on xxxxxxxxxx.</textarea></td>
+                  </tr>
+                  <tr>
+                    <td align="left" height="35" style="padding-left:5px"><input type="checkbox" name="check_age"> <span class="style2">Yes I am above 28 years of age.</span>.</td>
+                  </tr>
+                  <tr> 
+                    <td>                    </td>
+                  </tr>
+                  <tr>
+                    <td height="105" align="center" valign="middle" style="font-size : 10px; width: 10%; height: 100px;"><input name="btn_submit" type="submit" value="Register" onClick="return valid_signup();" class="sbt"></td>
+                  </tr>
+                </tbody></table>
+				</form>
+				{% endif %}
+				</div>
+				</div>
+			
+{% endblock %}
+				</td>
+              </tr>
+            </tbody></table></td>
+          </tr>
+        </tbody></table>
+		
+		</td> 
+      </tr>
+	</table>
+	  
+	  <table width="450" border="0" align="left" cellpadding="0" cellspacing="0" class="devi-wid">
+          <tr>
+	  <td valign="top" height="450">
+		<div style="margin:25px 20px 20px; font-size:16px; color:silver;  border:1px solid #888; ">
+		<div style="background-color:green; color:aqua; font-size:20px;padding:8px 10px;">Offer Details</div>
+		<div style="padding:8px; line-height:30px;">
+			        >>> Welcome drink on arrival.<br/>
+		>>> Valid for 3 Days + 2 Nights.<br/>
+		>>> Valid for 2 Adults & 2 Kids(Upto 5 years).<br/>
+		>>> 25 Listed Destinations in India & 9 Overseas.<br/>
+		>>> Pickup & Drop Facility Available.<br/>  
+		>>> 2 Breakfasts + 2 Dinners.<br/>
+		>>> Package valid for 7 months only.<br/>
+		>>> Get 7000 Redemption Points & can be Redeemed on Kandeal Portal.<br/>
+		>>> Minimum 60 days advance booking from the date of travel.<br/>		
+				</div>
+		</div>
+		</td>
+	  </tr>
+      </table>  
+
+		</td> 
+      </tr>
+    </tbody>
+	</table>
+	</td>
+  </tr>
+ 
+</tbody></table>
+
+</body></html>

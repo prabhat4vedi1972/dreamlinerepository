@@ -1,0 +1,13 @@
+{% extends "dappx/base.html" %}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to Dreamtime Travels</h1>
+    {% if user.is_authenticated %}
+        <h2>Hello Mr. {{ user.username }} ,How are you today?</h2>
+    {% else %}
+        <h2>Register if you are looking for best travel packages    </h2>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
