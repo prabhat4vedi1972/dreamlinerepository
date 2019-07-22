@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dappx',
+    'django_twilio',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,14 @@ STATICFILES_DIRS = [STATIC_DIR,]
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 LOGIN_URL = '/dappx/user_login/'
+
+TWILIO_ACCOUNT_SID = 'AC8ad160dd5248933ad0a32252da3d4c3f'
+TWILIO_AUTH_TOKEN = 'c883982ad8db1101e38306744d2a93db'
+TWILIO_PHONE_NUMBER= '+19514195701'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'prabhat4vedi@gmail.com'
+EMAIL_HOST_PASSWORD = 'AhamBramhAsmi10*'
+EMAIL_PORT = 587

@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from django.core.mail import EmailMessage
+
 def index(request):
     return render(request,'dappx/index.html')
 @login_required
@@ -24,6 +26,18 @@ def register(request):
 #            user.set_password(user.password)
  #           user.save()
             profile = profile_form.save(commit=False)
+            customer_name=profile_form.cleaned_data['name']
+            customer_phone=profile_form.cleaned_data['phone']
+            email = EmailMessage('New Registration: '+customer_name, customer_name+' is interested in the tour package. Please call him on '+customer_phone+' to discuss further.', to=['prabhat4vedi@gmail.com'])
+            email.send()
+            print(customer_name,customer_phone)
+            from twilio.rest import Client
+            from django.conf import settings
+
+            to = '+918169813384'
+            client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+            response = client.messages.create(body='New Registration: '+customer_name+'. '+customer_name+' is interested in the tour package. Please call him on '+customer_phone+' to discuss further.', 
+                 to=to, from_=settings.TWILIO_PHONE_NUMBER)
   #S          profile.user = user
             if 'profile_pic' in request.FILES:
                 print('found it')
